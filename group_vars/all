@@ -60,6 +60,7 @@ shell_aliases:
     - alias pull='hub pull-request --no-edit -o -p'
 
 utils:
+    - yay
     - base-devel
     - gconf
     - openssl-1.0
