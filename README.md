@@ -1,29 +1,17 @@
 # Manjaro/Arch Linux Ansible Provision
 
-This is an Ansible playbook meant to provision a Manjaro or Antergos Linux distribution,
-based on Arch Linux. It should run locally after a clean OS install.
+This is an Ansible playbook meant to provision a Manjaro or Antergos Linux distribution, based on Arch Linux.
+It should run locally after a clean OS install.
 
 ## Preamble
 
-### 1. Creating Bootable Linux USB Drive from the Command Line
-
-Find out the name of the USB drive
-```
-lsblk
-```
-
-Flash the ISO image to the USB drive
-```
-dd bs=4M if=/path/to/iso of=/dev/sdx status=progress oflag=sync
-```
-
-### 2. Refresh the copy of the master package database from the server and install `ansible`, `git` and `xclip`
+#### 1. Refresh the copy of the master package database from the server and install `ansible`, `git` and `xclip`
 ```
 sudo pacman -Syy
 sudo pacman -S ansible git xclip --noconfirm
 ```
 
-### 3. Set Git SSH credentials
+#### 2. Set Git SSH credentials
 
 Generate a new SSH Key
 ```
@@ -45,21 +33,21 @@ Copy the SSH public key to the clipboard
 xclip -sel clip < ~/.ssh/id_rsa.pub
 ```
 
-### 4. Git clone the current project
+### 3. Git clone the current project
 ```
-git clone git@github.com:PauloPortugal/manjaro-playbook.git
+git clone git@github.com:samayer12/manjaro-playbook.git
 ```
 
 ## Run
 
 ### Install everything
 ```
-ansible-playbook playbook.yml --extra-vars="user_name=USERNAME user_email=EMAIL" --ask-become-pass
+ansible-playbook playbook.yml --extra-vars="user_name=<user> user_email=<email>" --ask-become-pass
 ```
 
 ### Install everything with debug turned on
 ```
-ansible-playbook -vvv playbook.yml --extra-vars="user_name=USERNAME user_email=EMAIL" --ask-become-pass
+ansible-playbook -vvv playbook.yml --extra-vars="user_name=<user> user_email=<email>" --ask-become-pass
 ```
 
 ## Playbook Tags
@@ -85,7 +73,7 @@ Tags supported:
 
 Example on how to install only browsers:
 ```
-ansible-playbook playbook.yml --extra-vars="user_name=USERNAME user_email=EMAIL" --ask-become-pass --tags browsers
+ansible-playbook playbook.yml --extra-vars="user_name=<user> user_email=<email>" --ask-become-pass --tags <tag 1>,...,<tag n>
 ```
 
 ## Google Cloud Configuration
