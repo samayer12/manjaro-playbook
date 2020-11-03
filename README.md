@@ -56,7 +56,7 @@ Tags supported:
 
 | Tag         | Description                                                                                                      |
 |-------------|------------------------------------------------------------------------------------------------------------------|
-| base        | Install Linux util libraries, python-pip, xinput, terminator, snap and zsh                                       |
+| base        | Install Linux util libraries, python-pip, xinput, snap and zsh                                       |
 | users       | Setup user accounts                                                                                              |
 | printers    | Install printer drivers                                                                                          |
 | browsers    | Install Chrome and chromedriver
