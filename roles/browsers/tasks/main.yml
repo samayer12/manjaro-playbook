@@ -1,19 +1,8 @@
 ---
-- name: Install tor browser and required dependencies
-  pacman:
-    name: '{{ browser_tor }}'
+- name: Install google-chrome browser
+  yay:
+    name: '{{ browser }}'
     state: present
   become: yes
   tags:
-    - browsers
-    - tor
-
-- name: Install browsers from Arch User Repository
-  script: ../../../aur/install-aur.sh {{ item }}
-  with_items: '{{ browsers_aur }}'
-  register: install_result
-  changed_when: install_result.rc == 0
-  failed_when: install_result.rc != 0 and install_result.rc != 255
-  tags:
-    - aur
     - browsers
