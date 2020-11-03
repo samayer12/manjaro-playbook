@@ -1,7 +1,7 @@
 ---
 - name: Install tor browser and required dependencies
   pacman:
-    name: '{{ browser_tor }}'
+    name: '{{ browser_mozilla }}'
     state: present
   become: yes
   tags:
@@ -10,7 +10,7 @@
 
 - name: Install browsers from Arch User Repository
   script: ../../../aur/install-aur.sh {{ item }}
-  with_items: '{{ browsers_aur }}'
+  with_items: '{{ browser_chrome }}'
   register: install_result
   changed_when: install_result.rc == 0
   failed_when: install_result.rc != 0 and install_result.rc != 255

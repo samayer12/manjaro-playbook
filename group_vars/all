@@ -1,11 +1,12 @@
 audio_tools:
     - audacity
 
-browsers_chrome:
+browser_chrome:
     - google-chrome 
     - chromedriver 
 
 browser_mozilla:
+    - firefox
     - mozilla-common
 
 cloud_tools_aur:
@@ -77,6 +78,7 @@ utils:
     - xclip
     - xorg-xinput
     - ntp
+    - steam-manjaro
 
 utils_aur:
     - lsdesktopf
@@ -85,7 +87,8 @@ utils_aur:
     - zsh-git-prompt
 
 printers_aur:
-    - brother-mfc-j415w
+    - manjaro-printer
+    - hplip
 
 zsh_plugins:
     - archlinux
