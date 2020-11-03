@@ -67,7 +67,6 @@ utils:
     - make
     - mlocate
     - python-pip
-    - terminator
     - tree
     - xclip
     - xorg-xinput
@@ -77,6 +76,7 @@ utils:
     - git-extras
     - zsh
     - zsh-git-prompt
+    - ntop
 
 printers_aur:
     - brother-mfc-j415w
