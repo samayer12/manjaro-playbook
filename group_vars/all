@@ -2,10 +2,11 @@ audio_tools:
     - audacity
 
 browser:
+    - firefox
     - google-chrome
     - chromedriver
 
-cloud_tools_aur:
+cloud_tools:
     - google-cloud-sdk
 
 developer_stack:
