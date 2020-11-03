@@ -1,5 +1,5 @@
 ---
-- name: Install google-chrome browser
+- name: Install browsers
   yay:
     name: '{{ browser }}'
     state: present
