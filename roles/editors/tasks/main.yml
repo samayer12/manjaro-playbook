@@ -2,20 +2,10 @@
 - name: Install editors
   pacman:
     name: '{{ editors }}'
-    state: present
+    state: latest
   become: yes
   tags:
     - editors
-
-- name: Install editors from Arch User Repository
-  script: ../../../aur/install-aur.sh {{ item }}
-  with_items: '{{ editors_aur }}'
-  register: install_result
-  changed_when: install_result.rc == 0
-  failed_when: install_result.rc != 0 and install_result.rc != 255
-  tags:
-    - aur
-    - editors_aur
 
 - name: Setup default Git configuration
   git_config:
@@ -30,6 +20,5 @@
   become: yes
   tags:
     - git
-
 
 - include: xmind.yml
