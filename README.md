@@ -47,19 +47,19 @@ xclip -sel clip < ~/.ssh/id_rsa.pub
 
 ### 4. Git clone the current project
 ```
-git clone git@github.com:PauloPortugal/manjaro-playbook.git
+git clone git@github.com:samayer12/manjaro-playbook.git
 ```
 
 ## Run
 
 ### Install everything
 ```
-ansible-playbook playbook.yml --extra-vars="user_name=USERNAME user_email=EMAIL" --ask-become-pass
+ansible-playbook playbook.yml --extra-vars="user_name=<USER> user_email=<EMAIL>" --ask-become-pass
 ```
 
 ### Install everything with debug turned on
 ```
-ansible-playbook -vvv playbook.yml --extra-vars="user_name=USERNAME user_email=EMAIL" --ask-become-pass
+ansible-playbook -vvv playbook.yml --extra-vars="user_name=<USER> user_email=<EMAIL>" --ask-become-pass
 ```
 
 ## Playbook Tags
@@ -85,7 +85,7 @@ Tags supported:
 
 Example on how to install only browsers:
 ```
-ansible-playbook playbook.yml --extra-vars="user_name=USERNAME user_email=EMAIL" --ask-become-pass --tags browsers
+ansible-playbook playbook.yml --extra-vars="user_name=<USER> user_email=<EMAIL>" --ask-become-pass --tags <tags>
 ```
 
 ## Google Cloud Configuration
