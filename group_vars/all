@@ -77,6 +77,7 @@ utils:
     - zsh
     - zsh-git-prompt
     - ntop
+    - htop
 
 printers_aur:
     - brother-mfc-j415w
