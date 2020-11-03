@@ -1,15 +1,12 @@
 audio_tools:
     - audacity
 
-browsers_aur:
-    - google-chrome 86.0.4240.111-1
-    - chromedriver 86.0.4240.22-1
+browsers_chrome:
+    - google-chrome 
+    - chromedriver 
 
-browser_tor:
+browser_mozilla:
     - mozilla-common
-    - tor
-    - nyx
-    - torbrowser-launcher
 
 cloud_tools_aur:
     - google-cloud-sdk
@@ -38,22 +35,23 @@ developer_stack_aur:
 editors:
     - vim
     - atom
-    - emacs
+    - pycharm-community-edition
 
 editors_aur:
     - intellij-idea-ultimate-edition
     - jetbrains-toolbox
-    - visual-studio-code-bin
 
 media:
-    - peek
+    - vlc
+    - libaacs
+    - libbluray
 
 media_aur:
     - spotify
 
 multimedia:
     - gimp
-    - darktable
+    - obs-studio
 
 shell_aliases:
     - alias ll='ls -lrt'
@@ -69,6 +67,7 @@ utils:
     - binutils
     - gcc
     - htop
+    - ntop
     - make
     - mlocate
     - python-pip
