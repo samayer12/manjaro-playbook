@@ -32,10 +32,11 @@ developer_stack_aur:
 editors:
     - vim
     - atom
-    - emacs
 
 editors_aur:
     - intellij-idea-ultimate-edition
+    - webstorm
+    - pycharm-community-edition
     - jetbrains-toolbox
     - visual-studio-code-bin
 
@@ -71,11 +72,10 @@ utils:
     - xclip
     - xorg-xinput
     - ntp
-
-utils_aur:
     - lsdesktopf
     - mkpasswd
     - git-extras
+    - zsh
     - zsh-git-prompt
 
 printers_aur:
