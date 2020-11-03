@@ -8,7 +8,7 @@ It should run locally after a clean OS install.
 #### 1. Refresh the copy of the master package database from the server and install `ansible`, `git` and `xclip`
 ```
 sudo pacman -Syy
-sudo pacman -S ansible git xclip --noconfirm
+sudo pacman -S ansible git xclip yay --noconfirm
 ```
 
 #### 2. Set Git SSH credentials
